@@ -15,6 +15,8 @@ public class LearnOne : MonoBehaviour
     string varString = "This is a String";
     public int score = 5; // here score is public variable and will be available in inspecter for changne
                           // and is accessible outside the class
+
+    public int enterInegerValue = 2;    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +30,21 @@ public class LearnOne : MonoBehaviour
         print("This is string " + varString);
         print("This is a public variable " + score);
         // there has to be another way to use variable inside the quation marks.
+
+        // calling methods/funtion DoubleValue
+        int x = DoubleValue();
+        print(x);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    // method to print a value if something is true
+    int DoubleValue()
+    {
+        return 2 * enterInegerValue;
     }
 
     // OnEnable funtion is called first, even before the start

@@ -5,7 +5,8 @@ using UnityEngine;
 public class LearnTwo : MonoBehaviour
 {
     bool playing = false; // defining variable booliean typ
-    bool running = false;
+   public bool running ;
+    public bool killPlayer ;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,11 @@ public class LearnTwo : MonoBehaviour
         if (playing)
         {
             print(" keep playing");
-        } else if(!running){
+        } else if (killPlayer)
+        {
+            Destroy (gameObject); // will destroy the GameObject to which the script is attached
+        }
+        else if(!running){
             print("please stop playing video game and start running");
         }
         else
